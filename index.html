@@ -4,10 +4,126 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mikrothings</title>
-  <meta http-equiv="refresh" content="0; url=/claudetransfer-site/">
-  <link rel="canonical" href="https://mikrothings.github.io/claudetransfer-site/">
+  <meta name="description" content="Mikrothings builds small, focused software tools. Home of Claude Transfer.">
+  <link rel="icon" type="image/png" href="claudetransfer-site/logo.png">
+  <style>
+    :root {
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --text: #1c2430;
+      --muted: #5b6676;
+      --line: #e2e7ee;
+      --accent: #0f766e;
+      --accent-2: #1e3a8a;
+      --on-accent: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f141b;
+        --card: #161d27;
+        --text: #e6ebf2;
+        --muted: #9aa6b5;
+        --line: #263142;
+        --accent: #2dd4bf;
+        --accent-2: #93c5fd;
+        --on-accent: #0f141b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+    a { color: var(--accent); }
+    header { border-bottom: 1px solid var(--line); background: var(--card); }
+    header .wrap { display: flex; align-items: center; gap: 10px; height: 64px; }
+    .mark {
+      width: 34px; height: 34px; border-radius: 9px; flex: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: var(--on-accent); font-weight: 700; display: grid; place-items: center; font-size: 17px;
+    }
+    .brand { font-weight: 650; font-size: 18px; color: var(--text); text-decoration: none; }
+    header nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
+    .intro { padding: 56px 0 24px; }
+    h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+    .lead { font-size: 18px; color: var(--muted); margin: 0; max-width: 620px; }
+    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 32px 0 14px; font-weight: 600; }
+    .project {
+      display: flex; gap: 20px; align-items: flex-start;
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px;
+    }
+    .project img { width: 72px; height: 72px; border-radius: 17px; flex: none; }
+    .project h3 { margin: 0 0 4px; font-size: 20px; }
+    .project p { margin: 0 0 12px; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .tag { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-size: 15px; }
+    .links a.primary {
+      background: var(--accent); color: var(--on-accent); text-decoration: none; padding: 7px 14px; border-radius: 8px; font-weight: 600;
+    }
+    .contact { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; }
+    .contact p { margin: 0; }
+    footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 20px 0 32px; font-size: 14px; color: var(--muted); }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    @media (max-width: 560px) {
+      h1 { font-size: 28px; }
+      .intro { padding-top: 40px; }
+      .project { flex-direction: column; }
+      header nav { gap: 12px; }
+    }
+  </style>
 </head>
 <body>
-  <p><a href="/claudetransfer-site/">Claude Transfer</a></p>
+<header>
+  <div class="wrap">
+    <span class="mark" aria-hidden="true">m</span>
+    <a class="brand" href="./">Mikrothings</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>Small software that does one job well.</h1>
+    <p class="lead">Mikrothings is a software studio based in Türkiye. We build focused tools for our own work and share the ones that may help others.</p>
+  </section>
+
+  <h2 id="projects">Projects</h2>
+  <article class="project">
+    <img src="claudetransfer-site/logo.png" alt="Claude Transfer logo">
+    <div>
+      <h3>Claude Transfer</h3>
+      <p>A Windows command-line tool that moves and syncs Claude Code session data between your own computers through your own Google Drive.</p>
+      <div class="tags">
+        <span class="tag">Windows</span>
+        <span class="tag">Command line</span>
+        <span class="tag">Google Drive</span>
+      </div>
+      <div class="links">
+        <a class="primary" href="claudetransfer-site/">Learn more</a>
+        <a href="claudetransfer-site/privacy.html">Privacy Policy</a>
+        <a href="claudetransfer-site/terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </article>
+
+  <h2 id="contact">Contact</h2>
+  <div class="contact">
+    <p>Questions about our software: <a href="mailto:info@mikrothings.com">info@mikrothings.com</a> &middot; <a href="https://www.mikrothings.com">www.mikrothings.com</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Mikrothings</span>
+    <a href="https://github.com/mikrothings">GitHub</a>
+  </div>
+</footer>
 </body>
 </html>
